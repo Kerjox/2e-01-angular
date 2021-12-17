@@ -23,4 +23,14 @@ export class AlumnoComponent implements OnInit {
     return ''.concat(this.name, ' ', this.surname);
   }
 
+  aumentarEdad(): void {
+
+    this.age += 1;
+  }
+
+  disminuirEdad(): void {
+
+    this.age -= 1;
+  }
+
 }
