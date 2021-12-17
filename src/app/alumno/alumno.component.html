@@ -40,6 +40,11 @@
     </td>
   </tr>
 
+  <li *ngFor="let nickname of nicknames; let i">
+
+    {{nickname}}
+  </li>
+
   <button type="button" (click)="aumentarEdad()">Aumentar Edad</button>
   <button type="button" (click)="disminuirEdad()">Disminuir Edad</button>
 </table>

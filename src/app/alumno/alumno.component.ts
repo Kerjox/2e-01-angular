@@ -12,6 +12,7 @@ export class AlumnoComponent implements OnInit {
   surname: string = 'Battle Angel';
   direction: string = 'Iron City';
   age: number = 224;
+  nicknames: string[] = ['do-9', 'do-8'];
 
   constructor() { }
 
