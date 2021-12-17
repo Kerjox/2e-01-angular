@@ -1,0 +1,11 @@
+table {
+  border: #6d95ff;
+  font-family: Hack, serif;
+  font-size: large;
+  border-collapse: collapse;
+  font-style: italic;
+}
+
+td {
+  border: 1px solid red;
+}
