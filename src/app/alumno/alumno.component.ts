@@ -8,6 +8,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AlumnoComponent implements OnInit {
 
+  // Config Table
+  colls: number = 2;
+
+  // Table content
   name: string = 'Alita';
   surname: string = 'Battle Angel';
   direction: string = 'Iron City';
