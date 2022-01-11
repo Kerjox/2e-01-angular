@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-buttons',
@@ -8,19 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonsComponent implements OnInit {
 
   // Style
-  boldItalica: string = 'bold italica'
+  boldItalica: string = 'bold italica';
 
-  buttonState:boolean = true;
-  applyBold:boolean = false;
+  applyColor:boolean = false;
+  applyBold:boolean = true;
+
+  disableButton:boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addStyleClasses() {
+  applyStyleClasses() {
 
+    return {
 
+      bold: this.applyBold,
+      color: this.applyColor
+    }
   }
 
 }

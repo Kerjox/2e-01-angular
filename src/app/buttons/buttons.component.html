@@ -1,5 +1,5 @@
 <h1>Buttons</h1>
-<button class="color" [disabled]="buttonState">class="color" [disabled]="buttonState"</button>
+<button class="color" [disabled]="disableButton">class="color" [disabled]="buttonState"</button>
 <br>
 <button [class]="boldItalica">[class]="stylesDaniel"</button>
 <br>
@@ -9,4 +9,4 @@
 <br>
 <button class="color bold italic" [class.bold]="applyBold">class="color bold italic" [class.bold]="applyBold"</button>
 <br>
-<button></button>
+<button [ngClass]="applyStyleClasses()">[ngClass]="addStyleClasses()"</button>
