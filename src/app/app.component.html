@@ -1,5 +1,6 @@
 <div>
   <h1>{{header ? header : getCompleteName()}}</h1>
-  <img [src]="imagen" alt="" [width]="400"/>
+  <img [src]="imagen" alt=""/>
   <app-alumno></app-alumno>
+  <button [disabled]="buttonState">Button</button>
 </div>
