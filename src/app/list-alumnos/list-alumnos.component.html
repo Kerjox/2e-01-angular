@@ -1,0 +1,21 @@
+<h1>Alumnos List</h1>
+
+<table border="1">
+  <thead>
+  <th>Name</th>
+  <th>Street</th>
+  <th>Date</th>
+  <th>Gender</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let alumno of this.alumnos">
+    <td>{{alumno.name | alumnoTitulo:alumno.gender}}</td>
+    <td>{{alumno.street}}</td>
+    <td>{{alumno.date | date:'dd-MMM-y'}}</td>
+    <td>{{alumno.gender}}</td>
+  </tr>
+  <tr *ngIf="this.alumnos.length == 0">
+    <td class="col-error" colspan="5">No hay alumnos</td>
+  </tr>
+  </tbody>
+</table>

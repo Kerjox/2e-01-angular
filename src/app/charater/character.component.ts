@@ -3,10 +3,10 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-alumno',
-  templateUrl: './alumno.component.html',
-  styleUrls: ['./alumno.component.css']
+  templateUrl: './character.component.html',
+  styleUrls: ['./character.component.css']
 })
-export class AlumnoComponent implements OnInit {
+export class CharacterComponent implements OnInit {
 
   // Config Table
   colls: number = 2;

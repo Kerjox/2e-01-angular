@@ -1,15 +1,20 @@
 <div>
   <h1>{{header ? header : getCompleteName()}}</h1>
 
-  <div style="float: left">
+  <div class="component">
     <img [src]="imagen" alt=""/>
     <app-alumno></app-alumno>
   </div>
 
-  <div style="float: left">
+  <div class="component">
     <app-buttons></app-buttons>
   </div>
-  <div style="float: left">
+
+  <div class="component">
     <app-events></app-events>
+  </div>
+
+  <div class="component">
+    <app-list-alumnos></app-list-alumnos>
   </div>
 </div>
