@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-list-alumnos',
   templateUrl: './list-alumnos.component.html',
@@ -35,11 +36,40 @@ export class ListAlumnosComponent implements OnInit {
     }
   ];
 
+  alumnosToShow: any[] = this.alumnos;
+
   constructor() { }
+
+  getTotalPersonsNumber(): number {
+    return this.alumnos.length;
+  }
+
+  getTotalMenNumber(): number {
+
+    return this.alumnos.filter(a => a.gender === 'H').length;
+  }
+
+  getTotalWomenNumber(): number {
+
+    return this.alumnos.filter(a => a.gender === 'M').length;
+  }
 
   ngOnInit(): void {
 
     console.log(this.alumnos.length);
+  }
+
+  filterPersons($event: string) {
+
+    if ($event === 'H') {
+      this.alumnosToShow = this.alumnos.filter(value => value.gender === 'H');
+    } else if ($event === 'M') {
+      this.alumnosToShow = this.alumnos.filter(value => value.gender === 'M');
+    } else {
+      return this.alumnosToShow = this.alumnos;
+    }
+
+    return null;
   }
 
 }
