@@ -1,8 +1,8 @@
-<input type="radio" name="gender" (change)="changeGender('T')" [defaultChecked]="true">
+<input type="radio" name="gender" value="T" [(ngModel)]="gender" (change)="changeGender()" [defaultChecked]="true">
 <span class="radioClass"><b>Total:</b> {{totalPersons}}</span>
-<input type="radio" name="gender" (change)="changeGender('M')">
+<input type="radio" name="gender" value="H" [(ngModel)]="gender" (change)="changeGender()">
 <span class="radioClass"><b>Hombres:</b> {{totalMen}}</span>
-<input type="radio" name="gender" (change)="changeGender('H')">
+<input type="radio" name="gender" value="M" [(ngModel)]="gender" (change)="changeGender()">
 <span class="radioClass"><b>Mujeres:</b> {{totalWomen}}</span>
 
 

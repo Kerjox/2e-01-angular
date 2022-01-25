@@ -4,4 +4,6 @@ export interface IAlumno {
   street: string;
   date: string;
   gender: string;
+
+  edad(): number;
 }

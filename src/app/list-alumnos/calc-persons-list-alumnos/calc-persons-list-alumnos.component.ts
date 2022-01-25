@@ -10,7 +10,7 @@ export class CalcPersonsListAlumnosComponent implements OnInit {
   @Input() totalPersons: number = 0;
   @Input() totalMen: number = 0;
   @Input() totalWomen: number = 0;
-
+  gender: string = 'T';
   @Output() genderSelected = new EventEmitter<string>();
 
   constructor() { }
@@ -18,8 +18,10 @@ export class CalcPersonsListAlumnosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeGender(value: string) {
-    this.genderSelected.emit(value);
-    console.log(value);
+  changeGender() {
+    this.genderSelected.emit(this.gender);
+    console.log({
+      'Genero Seleccionado': this.gender
+    });
   }
 }

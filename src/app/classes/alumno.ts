@@ -14,4 +14,8 @@ export class Alumno implements IAlumno {
     this.date = date;
     this.gender = gender;
   }
+
+  edad(): number {
+    return 0;
+  }
 }

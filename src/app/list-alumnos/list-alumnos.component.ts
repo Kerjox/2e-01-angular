@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IAlumno } from "../interfaces/IAlumno";
+import { Alumno } from "../classes/alumno";
+import { AlumnoService } from "../services/alumno.service";
 
 
 @Component({
@@ -9,37 +10,13 @@ import { IAlumno } from "../interfaces/IAlumno";
 })
 export class ListAlumnosComponent implements OnInit {
 
-  //alumnos: any[] = [];
-  alumnos: IAlumno[] = [
-    {
-      name: 'Kerjox',
-      street: 'AAA',
-      date: '2/28/1990',
-      gender: 'H'
-    },
-    {
-      name: 'Alcachofa',
-      street: 'BBB',
-      date: '10/24/2004',
-      gender: 'H'
-    },
-    {
-      name: 'Juan',
-      street: 'CCC',
-      date: '12/1/2008',
-      gender: 'H'
-    },
-    {
-      name: 'Alba',
-      street: 'DDD',
-      date: '11/18/2007',
-      gender: 'M'
-    }
-  ];
+  alumnos: Alumno[];
+  alumnosToShow: Alumno[];
 
-  alumnosToShow: any[] = this.alumnos;
+  constructor(private alumnoService: AlumnoService) {
 
-  constructor() { }
+    this.alumnos = this.alumnosToShow = alumnoService.getAlumnos();
+  }
 
   getTotalPersonsNumber(): number {
     return this.alumnos.length;
@@ -57,20 +34,27 @@ export class ListAlumnosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.alumnos.length);
+    console.log( {
+      TotalAlumnos: this.alumnos.length
+    });
   }
 
   filterPersons($event: string) {
 
-    if ($event === 'H') {
-      this.alumnosToShow = this.alumnos.filter(value => value.gender === 'H');
-    } else if ($event === 'M') {
-      this.alumnosToShow = this.alumnos.filter(value => value.gender === 'M');
-    } else {
-      return this.alumnosToShow = this.alumnos;
-    }
+    switch ($event) {
 
-    return null;
+      case 'H':
+        this.alumnosToShow = this.alumnos.filter(value => value.gender === 'H');
+        break;
+
+      case 'M':
+        this.alumnosToShow = this.alumnos.filter(value => value.gender === 'M');
+        break;
+
+      default:
+        this.alumnosToShow = this.alumnos;
+
+    }
   }
 
 }
