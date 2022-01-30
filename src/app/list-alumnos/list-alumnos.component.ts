@@ -13,9 +13,9 @@ export class ListAlumnosComponent implements OnInit {
   alumnos: Alumno[];
   alumnosToShow: Alumno[];
 
-  constructor(private alumnoService: AlumnoService) {
+  constructor(public alumnoService: AlumnoService) {
 
-    this.alumnos = this.alumnosToShow = alumnoService.getAlumnos();
+    this.alumnos = this.alumnosToShow = [];
   }
 
   getTotalPersonsNumber(): number {
@@ -34,9 +34,15 @@ export class ListAlumnosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log( {
-      TotalAlumnos: this.alumnos.length
-    });
+    this.alumnoService.getAlumnos().subscribe(data => {
+      this.alumnos = this.alumnosToShow = data
+      console.log(data);
+      console.log( {
+        TotalAlumnos: this.alumnos.length
+      });
+      }
+    );
+
   }
 
   filterPersons($event: string) {

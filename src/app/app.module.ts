@@ -9,6 +9,7 @@ import { ListAlumnosComponent } from './list-alumnos/list-alumnos.component';
 import { AlumnoTituloPipe } from './pipes/alumno-titulo.pipe';
 import { CalcPersonsListAlumnosComponent } from './list-alumnos/calc-persons-list-alumnos/calc-persons-list-alumnos.component';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
