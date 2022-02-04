@@ -10,6 +10,8 @@ import { AlumnoTituloPipe } from './pipes/alumno-titulo.pipe';
 import { CalcPersonsListAlumnosComponent } from './list-alumnos/calc-persons-list-alumnos/calc-persons-list-alumnos.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { ListAlumnosCursoComponent } from './list-alumnos-curso/list-alumnos-curso.component';
+import { FilterCursoComponent } from './list-alumnos-curso/filter-curso/filter-curso.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { HttpClientModule } from "@angular/common/http";
     EventsComponent,
     ListAlumnosComponent,
     AlumnoTituloPipe,
-    CalcPersonsListAlumnosComponent
+    CalcPersonsListAlumnosComponent,
+    ListAlumnosCursoComponent,
+    FilterCursoComponent
   ],
   imports: [
     BrowserModule,

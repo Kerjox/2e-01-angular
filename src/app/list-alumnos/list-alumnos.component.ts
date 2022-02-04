@@ -18,31 +18,29 @@ export class ListAlumnosComponent implements OnInit {
     this.alumnos = this.alumnosToShow = [];
   }
 
-  getTotalPersonsNumber(): number {
+  ngOnInit(): void {
+
+    this.alumnoService.getAlumnos().subscribe(data => {
+        this.alumnos = this.alumnosToShow = data
+        console.log(data);
+        console.log(this.alumnos);
+      }
+    );
+  }
+
+  getTotal(): number {
+
     return this.alumnos.length;
   }
 
-  getTotalMenNumber(): number {
+  getTotalMen(): number {
 
     return this.alumnos.filter(a => a.gender === 'H').length;
   }
 
-  getTotalWomenNumber(): number {
+  getTotalWomen(): number {
 
     return this.alumnos.filter(a => a.gender === 'M').length;
-  }
-
-  ngOnInit(): void {
-
-    this.alumnoService.getAlumnos().subscribe(data => {
-      this.alumnos = this.alumnosToShow = data
-      console.log(data);
-      console.log( {
-        TotalAlumnos: this.alumnos.length
-      });
-      }
-    );
-
   }
 
   filterPersons($event: string) {

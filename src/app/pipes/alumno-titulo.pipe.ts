@@ -14,7 +14,7 @@ export class AlumnoTituloPipe implements PipeTransform {
         break
 
       case 'M':
-        value = 'Madam n'.concat(value)
+        value = 'Madam '.concat(value)
     }
     return value;
   }
