@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Curso } from "../../classes/curso";
 import { CursoService } from "../../services/curso.service";
 
@@ -10,11 +10,13 @@ import { CursoService } from "../../services/curso.service";
 export class FilterCursoComponent implements OnInit {
 
   @Input() cursoSelected: number;
+  @Output() idSelectedCourso: EventEmitter<number>;
   cursos: Curso[];
 
   constructor(private cursoService: CursoService) {
     this.cursoSelected = 0;
     this.cursos = [];
+    this.idSelectedCourso = new EventEmitter<number>();
   }
 
   ngOnInit(): void {
@@ -24,7 +26,13 @@ export class FilterCursoComponent implements OnInit {
     });
   }
 
-  filter() {
-    console.log(this.cursoSelected)
+  filterCurse() {
+
+    this.idSelectedCourso.emit(this.cursoSelected);
+
+    console.log(
+      {
+        "Curso Seleccionado": this.cursoSelected
+      });
   }
 }

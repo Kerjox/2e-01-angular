@@ -25,4 +25,9 @@ export class ListAlumnosCursoComponent implements OnInit {
     })
   }
 
+  filterCurse($event: number) {
+
+    this.alumnosToShow = this.alumnos.filter(a => a.curso.id == $event);
+    console.log(this.alumnosToShow)
+  }
 }

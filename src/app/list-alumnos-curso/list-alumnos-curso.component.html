@@ -1,6 +1,6 @@
 <h1>Alumnos Curso List</h1>
 
-<app-filter-curso></app-filter-curso>
+<app-filter-curso (idSelectedCourso)="filterCurse($event)"></app-filter-curso>
 <table border="1">
   <thead>
   <th>Name</th>
@@ -16,7 +16,7 @@
     <td>{{alumno.curso.nombreCurso}}</td>
 
   </tr>
-  <tr *ngIf="this.alumnos.length == 0">
+  <tr *ngIf="this.alumnosToShow.length == 0">
     <td class="col-error" colspan="5">No hay alumnos</td>
   </tr>
   </tbody>

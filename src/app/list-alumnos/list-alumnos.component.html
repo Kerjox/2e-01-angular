@@ -15,7 +15,7 @@
     <td>{{alumno.date | date:'dd-MMM-y'}}</td>
     <td>{{alumno.gender}}</td>
   </tr>
-  <tr *ngIf="this.alumnos.length == 0">
+  <tr *ngIf="this.alumnosToShow.length == 0">
     <td class="col-error" colspan="5">No hay alumnos</td>
   </tr>
   </tbody>
