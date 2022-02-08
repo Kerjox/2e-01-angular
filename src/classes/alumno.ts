@@ -4,13 +4,16 @@ import { Curso } from "./curso";
 
 export class Alumno implements IAlumno {
 
+  id: number
   name: string;
   street: string;
   date: string;
   gender: string;
   curso: Curso;
 
-  constructor(name: string, street: string, date: string, gender: string, curso: Curso) {
+  constructor(id: number, name: string, street: string, date: string, gender: string, curso: Curso) {
+
+    this.id = id;
     this.name = name;
     this.street = street;
     this.date = date;

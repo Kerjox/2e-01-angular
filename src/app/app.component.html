@@ -1,24 +1,30 @@
-<div>
-  <h1>{{header ? header : getCompleteName()}}</h1>
+<div class="row">
 
-  <div class="component">
-    <img [src]="imagen" alt=""/>
-    <app-alumno></app-alumno>
+  <div class="col">
+    <h1>{{header ? header : getCompleteName()}}</h1>
+    <img class="img-fluid rounded" [src]="imagen" alt=""/>
+    <app-alita></app-alita>
   </div>
 
-  <div class="component">
+  <div class="col">
     <app-buttons></app-buttons>
   </div>
 
-  <div class="component">
+
+  <div class="col">
     <app-events></app-events>
   </div>
 
-  <div class="component">
+</div>
+
+<div class="row">
+
+  <div class="col">
     <app-list-alumnos></app-list-alumnos>
   </div>
 
-  <div class="component">
+  <div class="col">
     <app-list-alumnos-curso></app-list-alumnos-curso>
   </div>
 </div>
+

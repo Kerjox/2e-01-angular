@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumno } from "../classes/alumno";
-import { AlumnoService } from "../services/alumno.service";
+import { Alumno } from "../../classes/alumno";
+import { AlumnoService } from "../../services/alumno.service";
 
 
 @Component({
@@ -21,8 +21,7 @@ export class ListAlumnosComponent implements OnInit {
   ngOnInit(): void {
 
     this.alumnoService.getAlumnos().subscribe(data => {
-        this.alumnos = this.alumnosToShow = data
-        console.log(data);
+        this.alumnos = this.alumnosToShow = data;
         console.log(this.alumnos);
       }
     );

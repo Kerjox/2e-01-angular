@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 
 @Component({
-  selector: 'app-alumno',
+  selector: 'app-alita',
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.css']
 })

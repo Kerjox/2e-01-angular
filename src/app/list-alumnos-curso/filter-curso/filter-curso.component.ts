@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Curso } from "../../classes/curso";
-import { CursoService } from "../../services/curso.service";
+import { Curso } from "../../../classes/curso";
+import { CursoService } from "../../../services/curso.service";
 
 @Component({
   selector: 'app-filter-curso',

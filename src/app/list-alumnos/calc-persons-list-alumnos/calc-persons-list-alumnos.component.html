@@ -1,9 +1,15 @@
-<input type="radio" name="gender" value="T" [(ngModel)]="gender" (change)="changeGender()" [defaultChecked]="true">
-<span class="radioClass"><b>Total:</b> {{totalPersons}}</span>
-<input type="radio" name="gender" value="H" [(ngModel)]="gender" (change)="changeGender()">
-<span class="radioClass"><b>Hombres:</b> {{totalMen}}</span>
-<input type="radio" name="gender" value="M" [(ngModel)]="gender" (change)="changeGender()">
-<span class="radioClass"><b>Mujeres:</b> {{totalWomen}}</span>
-
-
-
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="T"
+         [(ngModel)]="gender" (change)="changeGender()">
+  <label class="form-check-label" for="inlineRadio1">Total</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="H"
+         [(ngModel)]="gender" (change)="changeGender()">
+  <label class="form-check-label" for="inlineRadio2">Hombres</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="M"
+         [(ngModel)]="gender" (change)="changeGender()">
+  <label class="form-check-label" for="inlineRadio3">Mujeres</label>
+</div>

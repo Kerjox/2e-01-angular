@@ -1,5 +1,6 @@
-<select [(ngModel)]="cursoSelected" (change)="filterCurse()">
-  <option *ngFor="let curso of cursos" [value]="curso.id">
-    {{curso.nombreCurso}}
-  </option>
+
+<select class="form-select-sm" [(ngModel)]="cursoSelected" (change)="filterCurse()">
+  <ng-container *ngFor="let curso of cursos">
+    <option [value]="curso.id">{{curso.nombreCurso}}</option>
+  </ng-container>
 </select>

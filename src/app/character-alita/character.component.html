@@ -1,53 +1,51 @@
-<table>
+<table class="table">
   <thead>
     <th [colSpan]="colls">Personaje</th>
   </thead>
   <tr>
-    <td>
+    <th scope="row">
       <label>Nombre Completo: </label>
-    </td>
+    </th>
     <td>
       {{getNombreCompleto()}}
     </td>
   </tr>
   <tr>
-    <td>
+    <th scope="row">
       <label>Nombre: </label>
-    </td>
+    </th>
     <td>
       {{name}}
     </td>
   </tr>
   <tr>
-    <td>
+    <th scope="row">
       <label>Apellido: </label>
-    </td>
+    </th>
     <td>
       {{surname}}
     </td>
   </tr>
   <tr>
-    <td>
+    <th scope="row">
       <label>Dirección: </label>
-    </td>
+    </th>
     <td>
       {{direction}}
     </td>
   </tr>
   <tr>
-    <td>
+    <th scope="row">
       <label>Edad: </label>
-    </td>
+    </th>
     <td>
       {{age}}
     </td>
   </tr>
-
-  <li *ngFor="let nickname of nicknames; let i">
-
-    {{nickname}}
-  </li>
-
-  <button type="button" (click)="aumentarEdad()">Aumentar Edad</button>
-  <button type="button" (click)="disminuirEdad()">Disminuir Edad</button>
 </table>
+<ng-container *ngFor="let nickname of nicknames; let i">
+  <li>{{nickname}}</li>
+</ng-container>
+<button class="btn btn-outline-success" type="button" (click)="aumentarEdad()">Aumentar Edad</button>
+<button class="btn btn-outline-danger" type="button" (click)="disminuirEdad()">Disminuir Edad</button>
+
