@@ -22,7 +22,10 @@ export class ListAlumnosComponent implements OnInit {
 
     this.alumnoService.getAlumnos().subscribe(data => {
         this.alumnos = this.alumnosToShow = data;
-        console.log(this.alumnos);
+        console.log( {
+          "message": "Listado de alumnos",
+          "payload": this.alumnos
+        });
       }
     );
   }
