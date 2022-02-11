@@ -1,30 +1,24 @@
-<div class="row">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">Angular</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Todos">Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Alumno">Alumnos</a>
+        </li>
 
-  <div class="col">
-    <h1>{{header ? header : getCompleteName()}}</h1>
-    <img class="img-fluid rounded" [src]="imagen" alt=""/>
-    <app-alita></app-alita>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="AlumnosCurso">AlumnosCurso</a>
+        </li>
+
+      </ul>
+    </div>
   </div>
-
-  <div class="col">
-    <app-buttons></app-buttons>
-  </div>
-
-
-  <div class="col">
-    <app-events></app-events>
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col">
-    <app-list-alumnos></app-list-alumnos>
-  </div>
-
-  <div class="col">
-    <app-list-alumnos-curso></app-list-alumnos-curso>
-  </div>
-</div>
-
+</nav>
+<router-outlet></router-outlet>

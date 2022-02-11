@@ -12,7 +12,21 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ListAlumnosCursoComponent } from './list-alumnos-curso/list-alumnos-curso.component';
 import { FilterCursoComponent } from './list-alumnos-curso/filter-curso/filter-curso.component';
+import { RouterModule, Routes } from "@angular/router";
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { TodosModulosComponent } from './todos-modulos/todos-modulos.component';
 
+const routes: Routes = [
+  { path: 'Alumno', component: ListAlumnosComponent },
+  { path: 'Profes', component: ProfesoresComponent },
+  { path: 'Todos', component: TodosModulosComponent },
+  { path: 'AlumnosCurso', component: ListAlumnosCursoComponent },
+
+  { path: '**',  redirectTo: '' }
+
+
+
+]
 
 @NgModule({
   declarations: [
@@ -24,12 +38,15 @@ import { FilterCursoComponent } from './list-alumnos-curso/filter-curso/filter-c
     AlumnoTituloPipe,
     CalcPersonsListAlumnosComponent,
     ListAlumnosCursoComponent,
-    FilterCursoComponent
+    FilterCursoComponent,
+    ProfesoresComponent,
+    TodosModulosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
