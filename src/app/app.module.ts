@@ -15,9 +15,11 @@ import { FilterCursoComponent } from './list-alumnos-curso/filter-curso/filter-c
 import { RouterModule, Routes } from "@angular/router";
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { TodosModulosComponent } from './todos-modulos/todos-modulos.component';
+import { AlumnoComponent } from './alumno/alumno.component';
 
 const routes: Routes = [
   { path: 'Alumno', component: ListAlumnosComponent },
+  { path: 'Alumno/:name', component: AlumnoComponent },
   { path: 'Profes', component: ProfesoresComponent },
   { path: 'Todos', component: TodosModulosComponent },
   { path: 'AlumnosCurso', component: ListAlumnosCursoComponent },
@@ -40,7 +42,8 @@ const routes: Routes = [
     ListAlumnosCursoComponent,
     FilterCursoComponent,
     ProfesoresComponent,
-    TodosModulosComponent
+    TodosModulosComponent,
+    AlumnoComponent
   ],
   imports: [
     BrowserModule,

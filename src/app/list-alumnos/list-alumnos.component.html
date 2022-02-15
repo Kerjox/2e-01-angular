@@ -10,7 +10,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let alumno of alumnosToShow">
-    <td>{{alumno.name | alumnoTitulo:alumno.gender}}</td>
+    <td><a [routerLink]="['/Alumno', alumno.name]">{{alumno.name | alumnoTitulo:alumno.gender}}</a></td>
     <td>{{alumno.street}}</td>
     <td>{{alumno.date | date:'dd-MMM-y'}}</td>
     <td>{{alumno.gender}}</td>
